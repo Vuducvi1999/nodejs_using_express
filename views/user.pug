@@ -1,0 +1,14 @@
+h1 Create
+a(href='/create') move to create
+br
+h1 search
+form(action="/search")
+    label(for='name') nhập tên
+    input(type='text',id='name',name='name')
+    button search
+h1 list user
+ul
+    each item in list
+        li
+            span= item.name + ' '
+            a(href='/user/' + item.id) view 
